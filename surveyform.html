@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #f1{
+            background-color: #1b1b32cc;
+            padding: 50px 40px 40px 40px ; 
+            border-radius: 5px;  
+            width:50%;  
+            margin-right: auto;
+            margin-left: auto;
+         }
+         .ort{
+             border-radius: 5px;
+             width:94%; 
+             height:30px;
+             padding:6px 8px;
+             margin: 8px 0px 2px 8px;
+             font-size: medium;
+         }
+         .font{
+             color:white;
+             font-family: sans-serif;
+             margin:8px 0px 0px 1px;
+             padding:8px;
+             font-size: 18px;
+         }
+         .reco{
+             color:white;
+             flex-direction:column;
+             justify-content: end;
+             padding:6px 8px;
+             margin: 8px 0px 2px 8px; 
+             min-height: 1.25rem;
+             min-width: 1.25rem;   
+         }
+         .imp{
+             min-height: 1.25rem;
+             min-width: 1.25rem;
+             font-family: sans-serif;
+             padding:6px 8px;
+             margin: 8px 0px 4px 8px;    
+         }
+         .a{
+             display: flex;
+             align-items:center;
+         }
+         
+         #gonder{
+             background-color: #37af65;
+             padding:6px 8px;
+             margin: 8px 0px 2px 8px;
+             width: 98.5%;
+             height: 60px;
+             font-size: 16px;
+             font-family: sans-serif;
+             color:#f3f3f3;
+             border-radius: 5px;
+         }
+
+    </style>
+</head>
+<body>
+    
+    <div style="background-image: url('pexels-oleg-prachuk-7940827.jpg'); margin: -20px; padding-top:200px; background-size: cover; background-position: center;">
+        <div style="text-align: center;">
+            <h1 style="margin-top: 0; margin-bottom: 0.5rem; font-weight: 400; line-height: 1.2; font-family:sans-serif; color:white;">Survey Form</h1>
+            <p style="margin-top: 0; margin-bottom: 0.5rem;font-style: italic; font-weight: 200;text-shadow: 1px 1px 1px rgb(0 0 0 / 40%);font-size: 1.125rem; color:white;">Thank you for taking the time to help us improve the platform</p>
+        </div>
+        <br>
+        <form action="process.php" id="f1">
+            <label for="fname" class="font" >Name</label><br>
+            <input type="text" id="fname" class="ort" name="fname" placeholder="Enter your name">
+            <br><br><br>
+            <label for="fmail" class="font" >Email</label><br>
+            <input type="text" id="fmail" class="ort" name="fmail" placeholder="Enter your Email">
+            <br><br><br>
+            <label for="fage" class="font" >Age(optional)</label><br>
+            <input type="text" id="fage" class="ort" name="fage" placeholder="Age">
+            <br><br><br>
+    
+            <label for="currole" class="font" >Which option best describes your current role?</label>
+            <select name="currole" id="currole" class="ort" style="width:98.4%; height: 40px; ">
+                <option value="curr">Select current role</option>
+                <option value="student">Student</option>
+                <option value="fullTime">Full Time Job</option>
+                <option value="fullLearn">Full Time Learner</option>
+                <option value="prefer">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br><br>
+    
+            <p class="font">Would you recommend freeCodeCamp to a friend?</p>
+            <div class="a"><input type="radio" id="rec" class="reco" name="rec" value="Definitely"><label for="rec" class="font">Definitely</label><br> </div>
+            <div class="a"><input type="radio" id="rec1" class="reco" name="rec" value="Maybe"><label for="rec1" class="font">Maybe</label><br></div>
+            <div class="a"><input type="radio" id="rec2" class="reco" name="rec" value="Not sure"><label for="rec2" class="font">Not sure</label></div>
+            <br><br><br>
+    
+            <label for="" class="font" >What is your favorite feature of freeCodeCamp?</label>
+            <select name="feature" id="feature" class="ort" style="width:98.4%; height: 40px; ">
+                <option value="opt">Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="comm">Community</option>
+                <option value="opsrc">Open Source</option>
+            </select>
+            <br><br><br>
+            
+    
+            <p class="font">What would you like to see improved? (Check all that apply)</p><br>
+            <div class="a"><input type="checkbox" id="imp"  class="imp" name="improve" value="front"><label for="imp" class="font">Front-end Projects</label><br></div>
+            <div class="a"><input type="checkbox" id="imp1" class="imp" name="improve" value="datav"><label for="imp1" class="font">Data Visualization</label><br></div>
+            <div class="a"><input type="checkbox" id="imp2" class="imp" name="improve" value="back"><label for="imp2" class="font">Back-end Projects</label><br></div>
+            <div class="a"><input type="checkbox" id="imp3" class="imp" name="improve" value="opsrc"><label for="imp3" class="font">Open Source Community</label><br></div>
+            <div class="a"><input type="checkbox" id="imp4" class="imp" name="improve" value="gitter"><label for="imp4" class="font">Gitter help rooms</label><br></div>
+            <div class="a"><input type="checkbox" id="imp5" class="imp" name="improve" value="challenges"><label for="imp5" class="font">Challenges</label><br></div>
+            <div class="a"><input type="checkbox" id="imp6" class="imp" name="improve" value="videos"><label for="imp6" class="font">Videos</label><br></div>
+            <div class="a"><input type="checkbox" id="imp7" class="imp" name="improve" value="cmeet"><label for="imp7" class="font">City Meetups</label><br></div>
+            <div class="a"><input type="checkbox" id="imp8" class="imp" name="improve" value="wiki"><label for="imp8" class="font">Wiki</label><br></div>
+            <div class="a"><input type="checkbox" id="imp9" class="imp" name="improve" value="forum"><label for="imp9" class="font">Forum</label><br></div>
+            <div class="a"><input type="checkbox" id="imp10" class="imp" name="improve" value="addcourses"><label for="imp10" class="font">Additional Courses</label><br></div>
+            <br><br>
+            <p class="font">Any comments or suggestions?</p>
+            <textarea name="message" id="msg" style="width:95%; min-height:120px; padding:0.625rem; font-family: sans-serif; font-size: 18px; padding:6px 8px; margin: 8px 0px 2px 8px;" placeholder="Enter your comment here..."></textarea>
+           
+            <br><br><br>
+           
+           
+            <input type="submit" id="gonder" value="Submit">
+    
+        </form>
+        
+    </div>
+    
+
+    
+</body>
+</html>
